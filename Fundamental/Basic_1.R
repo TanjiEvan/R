@@ -69,6 +69,42 @@ pop
 colnames(pop)<- salary_type
 pop
 
+## Matrix Arithmetic
+
+rowSums(pop)
+rowMeans(pop)
+
+colSums(pop)
+
+
+total <-  rowSums(pop) 
+avrg <- rowMeans(pop)
+mat2<-cbind(pop,total,avrg) ## Col Bind
+mat2
+
+col_total <-colSums(mat2)
+complete_mat <- rbind(mat2,col_total) ##Row bind
+
+##ACCURACY =mid/low
+
+accuracy_google <- complete_mat[1,2]/complete_mat[1,1]
+accuracy_google 
+
+acceracy_overall <- complete_mat[3,2]/complete_mat[3,1]
+acceracy_overall
+
+complete_mat
+complete_mat[2:3,1:3]
+
+complete_mat[2:2,1:3]
+
+complete_mat["Google","high"]
+
+
+
+
+
+
 
 
 
