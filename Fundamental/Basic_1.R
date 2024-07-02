@@ -37,14 +37,37 @@ salary_type_numerical <- factor (salary_type,
 str(salary_type_numerical)
 
 
+## Vector Indexing & Slicing 
+
+mat <- c(1:50)
+
+mat_new <- mat [6:12]
+
+mat_new1 <- mat[ mat > 20]
 
 
+## R Matrixx ##
+
+x <- c(1:9)
+matrix(x)
+matrix(x,nrow=3)
+matrix(x,nrow=3,byrow=TRUE)
+
+y <- c(1:6)
+matrix(y,nrow=3,ncol=2,byrow=TRUE)
+
+## table ## 
+google<- c(290,900,222)
+micro<- c(300,200,120)
+pop <- matrix(c(google,micro),nrow=2,byrow=TRUE)
 
 
+colnames(pop)<- c("Sat","Sun","Mon")
+rownames(pop)<- c("Google","Microsoft")
+pop
 
-
-
-
+colnames(pop)<- salary_type
+pop
 
 
 
