@@ -100,7 +100,112 @@ complete_mat[2:2,1:3]
 
 complete_mat["Google","high"]
 
+## Factor and Categorical Matrix ##
+
+gender <- c("Male","Female","Male","Female")
+age <- c(20,19,30,28)
+matrix(c(gender,age),nrow=2,byrow=T)
+
+gender<-as.factor(gender)
+matt <- matrix(c(gender,age),nrow=2,byrow=T)
+str(gender)
+
+colnames(matt)<-gender
+
 ## Dataframe ##
+
+data()
+df <- state.x77 ## Dataset available in preinstalled pckg
+head(df)
+
+head(df,4)
+tail(df)
+
+summary(df)
+summary(gender)
+
+class(df)
+df <-as.data.frame(df)
+
+df$Population
+summary(df$Population)
+names(df) ##returns col name
+str(df)
+
+##Exporting & Importing Dataset
+write.csv(df, "C:\\Users\\SPPL IT\\Desktop\\Study\\Data Science\\R\\Fundamental\\df3.csv")       
+
+df2<-read.csv("C:\\Users\\SPPL IT\\Desktop\\Study\\Data Science\\R\\Fundamental\\df2.csv")
+
+summary(df2)
+
+## Working With Missing Value ##
+
+is.na(df2) ##True Means missing value
+
+sum(is.na(df2) ) ##Total Misssing Data
+
+
+## Creating Dataframes ##
+
+people <- data.frame(age,gender)
+
+mat <- c(1:20)
+mat <-matrix(mat,ncol=5,byrow=T)
+colnames(mat) <- c("Sat","Sun","Mon","Tue","Wed")
+
+mat_df <- as.data.frame(mat)
+mat_df
+
+df_new <- df[,c(2,5,8)]
+
+# Ensure df_new is a data frame
+df_new <- as.data.frame(df[, c(2, 5, 8)])
+
+# Add the State column
+df_new$State <- rownames(df_new)
+
+head(df_new)
+
+rownames(df_new)<-NULL
+df_new
+ 
+## Using Subset ##
+
+df_new <- df[,c(2,5,8)]
+
+df22_new<-subset(df, select= c(2,5,8))
+head(df22_new)
+
+df_new2 <- df[df[,"Murder"]>4.5,c(2,5,8)] ##Conditional Filtering
+
+subset(df2,Income>5000 , select= c(1,2))
+
+
+## Using Order () ##
+class(df2)
+head(df)
+df2[order(df2$Murder),] ## Ascending 
+desc <- df2[order(-df2$Murder),] ##Descending
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
