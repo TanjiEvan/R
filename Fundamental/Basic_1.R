@@ -189,13 +189,23 @@ df2[order(df2$Murder),] ## Ascending
 desc <- df2[order(-df2$Murder),] ##Descending
 
 
+## Lists ##
 
+v <- c(1:10)
+mat <- matrix(c(1:9),nrow=3)
 
+df <- mtcars
 
+L <- list(v, mat , df)
+L
 
+L[[1]]
+L[[3]]
 
-
-
+L2 <- list( array = v , my_matrix =mat , my_data=df)
+L2
+L2 [["array"]]
+L2$my_data
 
 
 
