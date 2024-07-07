@@ -69,6 +69,33 @@ for(i in v){
   print(sum_even)
 }
 
+## I will provide a vector, it will check for even numbers and then
+## it will return me the square of those even numbers
+
+v <- c(1,4,5,8,10) # expected result = (16, 64, 100)
+
+sqr_even <- c()
+
+for (i in v){
+  if(i %% 2 == 0){
+    sqr_even<- c(sqr_even , i^2)
+  }
+}
+sqr_even
+
+## I want to calculate both primary diagonal sum and secondary diagonal
+## sum of a 3x3 matrix
+
+
+
+
+
+
+
+
+
+
+
 
 
 
