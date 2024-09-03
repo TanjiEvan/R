@@ -1,13 +1,11 @@
-# Load necessary library
+
 library(readr)
 
 setwd("X:/R/Fundamental")
-
-# Read the CSV file into a data frame
+# 
 df <- read_csv("dm_office_sales.csv")
 
-# View the first few rows of the data frame
-head(df)
+
 
 # scatter plot
 ggplot(df, aes(x = sales, y = salary, color = sales)) +
